@@ -399,9 +399,5 @@ body:has(.floppy_dialog[open]) {
     border: var(--main-border);
     padding-block: 30px;
     justify-items: center;
-}
-
-.article_label {
-  right: 0px;
-}
+  }
 }
