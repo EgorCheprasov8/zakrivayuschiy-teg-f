@@ -91,7 +91,7 @@
   right: 25px;
   top: 27px;
   font-size: 14px;
-  font-family: var(--backup-font);
+  font-family: var(--backup-font), "Arial", sans-serif;
   font-weight: var(--text-weight);
   color: #000;
   mix-blend-mode: hard-light;
@@ -100,7 +100,8 @@
 
 @supports (
   (text-stroke: 1px var(--shadow-color)) or
-    (-webkit-text-stroke: 1px var(--shadow-color))) {
+    (-webkit-text-stroke: 1px var(--shadow-color))
+) {
   .article_label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
@@ -122,6 +123,7 @@
   flex-direction: column;
   background-color: var(--background-color);
   padding: 25px 25px;
+  line-height: 21px;
 }
 
 .article_text:last-of-type {
@@ -146,7 +148,7 @@
   padding-inline: 0;
   background-color: transparent;
   outline: 2px solid transparent;
-  transition: outline var(--time_step) ease;
+  transition: outline var(--time-step) ease;
 }
 
 .sparks {
@@ -221,7 +223,7 @@
   cursor: pointer;
   position: relative;
   display: flex;
-  margin: 0 auto 80px;
+  margin: 0 auto;
   width: 340px;
   height: 55px;
   align-items: center;
@@ -243,7 +245,8 @@
 
 .dialog_floppy_svg {
   block-size: 39px;
-  width: 100px;
+  inline-size: 39px;
+  flex-shrink: 0;
   mix-blend-mode: difference;
   position: relative;
   color: white;
@@ -260,7 +263,7 @@
   inline-size: 353px;
   flex-shrink: 0;
   border: var(--main-border);
-  padding-block: 30px;
+  padding: 30px 40px;
   justify-items: center;
   background-color: var(--background-color);
   color: var(--color);
@@ -296,8 +299,8 @@ body:has(.floppy_dialog[open]) {
 .dialog_description {
   display: flex;
   align-items: center;
-  width: 293px;
-  gap: 12px;
+  width: 100%;
+  gap: 20px;
   padding-bottom: 30px;
 }
 
@@ -309,9 +312,8 @@ body:has(.floppy_dialog[open]) {
 .button_ok {
   display: flex;
   justify-content: center;
-  width: 293px;
+  width: 100%;
 }
-
 
 /*ФИЛЬТРЫ НИЖНИХ КАРТОЧЕК*/
 
@@ -350,7 +352,6 @@ body:has(.floppy_dialog[open]) {
 /*ФИЛЬТРЫ ВЕРХНИХ КАРТОЧЕК*/
 
 @media (width <= 375px) {
-
   .main,
   .header,
   .footer {
@@ -385,7 +386,7 @@ body:has(.floppy_dialog[open]) {
     width: 312px;
     height: 84px;
     gap: 8px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .decorated_button_text {
@@ -397,7 +398,7 @@ body:has(.floppy_dialog[open]) {
     inline-size: 341px;
     flex-shrink: 0;
     border: var(--main-border);
-    padding-block: 30px;
+    padding: 30px 42px;
     justify-items: center;
   }
 }
