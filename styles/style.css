@@ -263,7 +263,7 @@
   inline-size: 353px;
   flex-shrink: 0;
   border: var(--main-border);
-  padding: 30px 40px;
+  padding: 30px;
   justify-items: center;
   background-color: var(--background-color);
   color: var(--color);
@@ -398,7 +398,7 @@ body:has(.floppy_dialog[open]) {
     inline-size: 341px;
     flex-shrink: 0;
     border: var(--main-border);
-    padding: 30px 42px;
+    padding: 30px 40px;
     justify-items: center;
   }
 }
